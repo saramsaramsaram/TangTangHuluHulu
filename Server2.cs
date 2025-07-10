@@ -11,7 +11,6 @@ public class Server2 : MonoBehaviour
     private Button registerButton;
     private Text statusText;
 
-    // ✅ 여기에 ngrok HTTPS 주소 적용
     private string baseUrl = "https://2c75-221-168-22-203.ngrok-free.app/api/auth/";
 
     [System.Serializable]
