@@ -36,7 +36,7 @@ public class Boss1 : MonoBehaviour
                 animator.SetBool("isMoving", true);
             }
             else
-            { 
+            {
                 if (Time.time - lastSkill2 >= Skill2Cooldown)
                 {
                     lastSkill2 = Time.time;
