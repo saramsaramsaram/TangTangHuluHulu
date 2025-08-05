@@ -19,11 +19,9 @@ public class PlayerAttack : MonoBehaviour
     }
     void Start()
     {
-
-        // FirePoint 오브젝트 생성
         GameObject firePointObj = new GameObject("FirePoint");
         firePointObj.transform.SetParent(transform);
-        firePointObj.transform.localPosition = new Vector3(0, 0.7f, 0.5f); // 가슴팍 위치
+        firePointObj.transform.localPosition = new Vector3(0, 0.7f, 0.5f);
         firePoint = firePointObj.transform;
 
         InvokeRepeating("AttackPlayer", 0f, SpeedAttack);
@@ -33,7 +31,6 @@ public class PlayerAttack : MonoBehaviour
         GameObject closestEnemy = FindClosestEnemy();
         if (closestEnemy == null || firePoint == null) return;
 
-        // 가슴팍 위치에서 딸기 생성
         GameObject strawberry = Instantiate(strawberryPrefab, firePoint.position, Quaternion.identity);
         strawberry.transform.SetParent(CloneFolder.transform);
 
